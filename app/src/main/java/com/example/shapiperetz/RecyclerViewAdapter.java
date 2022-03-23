@@ -119,9 +119,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 }
             });
         }
-        public void saveData(int id, int count) {
+        public void saveData(String id, int count) {
             SharedPreferences.Editor ed = sPref.edit();
-            ed.putInt(Integer.toString(id), count);
+            ed.putInt(id, count);
             ed.apply();
         }
     }

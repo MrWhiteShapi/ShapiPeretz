@@ -4,32 +4,28 @@ import com.google.gson.annotations.SerializedName;
 
 public class Constructor {
     @SerializedName("id")
-    private int sectionId;
+    private String sectionId;
 
     @SerializedName("name")
     private String sectionTitle;
 
-    @SerializedName("image_app")
+    @SerializedName("image")
     private String sectionImage;
 
-//    @SerializedName("price")
-//    private String sectionDesc;
-
     @SerializedName("price")
-    private int price;
+    private String sectionDesc;
 
-//    @SerializedName("oldPrice")
-//    private String price;
+    @SerializedName("oldPrice")
+    private String price;
 
     @SerializedName("description")
     private String desk;
 
-
-    public int getSectionId() {
+    public String getSectionId() {
         return sectionId;
     }
 
-    public void setSectionId(int sectionId) {
+    public void setSectionId(String sectionId) {
         this.sectionId = sectionId;
     }
 
@@ -49,21 +45,21 @@ public class Constructor {
         this.sectionImage = sectionImage;
     }
 
-//    public String getSectionDesc() {
-//        return sectionDesc;
-//    }
-//
-//    public void setSectionDesc(String sectionDesc) {
-//        this.sectionDesc = sectionDesc;
-//    }
-//
-//    public String getPrice() {
-//        return price;
-//    }
-//
-//    public void setPrice(String price) {
-//        this.price = price;
-//    }
+    public String getSectionDesc() {
+        return sectionDesc;
+    }
+
+    public void setSectionDesc(String sectionDesc) {
+        this.sectionDesc = sectionDesc;
+    }
+
+    public String getPrice() {
+        return price;
+    }
+
+    public void setPrice(String price) {
+        this.price = price;
+    }
 
     public String getDesk() {
         return desk;
@@ -71,14 +67,5 @@ public class Constructor {
 
     public void setDesk(String desk) {
         this.desk = desk;
-    }
-
-    public int getPrice() {
-
-        return price;
-    }
-
-    public void setPrice(int price) {
-        this.price = price;
     }
 }

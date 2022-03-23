@@ -51,43 +51,29 @@ public class FoodMenu extends AppCompatActivity {
                 if (response.isSuccessful()){
                     List<Constructor> responseFood = response.body();
                     dataToAdapter(responseFood);
-                    Log.e("My_Key", String.valueOf(responseFood));
                 }
             }
 
             @Override
             public void onFailure(Call<List<Constructor>> call, Throwable t) {
                 Toast.makeText(getApplicationContext(), "ERROR", Toast.LENGTH_SHORT).show();
-                Log.e("My_Key", t.getMessage());
-                t.printStackTrace();
+
 
             }
         });
 
     }
 
-//    private void buildRetrofit(){
-//       Gson gson = new GsonBuilder()
-//                .setLenient()
-//                .create();
-//       retrofit = new Retrofit.Builder()
-//                .baseUrl("https://api.gambit-app.ru/")
-//                .addConverterFactory(GsonConverterFactory.create())
-//                .build();
-//    }
-
-
-
     private void buildRetrofit(){
-        Gson gson = new GsonBuilder()
+       Gson gson = new GsonBuilder()
                 .setLenient()
                 .create();
-        retrofit = new Retrofit.Builder()
-                .baseUrl("https://peretz-group.ru/api/v2/")
-//                .addConverterFactory(new NullOnEmptyConverterFactory())
+       retrofit = new Retrofit.Builder()
+                .baseUrl("https://api.gambit-app.ru/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
     }
+
 
     public void returnToMainActivity(View view) {
         Intent toMainActivity = new Intent(FoodMenu.this, MainActivity.class);
