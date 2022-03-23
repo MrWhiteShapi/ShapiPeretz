@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="imgFood" type="id" />
+    <item name="txtTitle" type="id" />
+    <item name="txtDescription" type="id" />
+    <item name="txtPrice" type="id" />
+    <item name="txtCount" type="id" />
+    <item name="plus_butt" type="id" />
+    <item name="minus_butt" type="id" />
+</resources>
